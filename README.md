@@ -116,7 +116,6 @@ flink-testing/
 
 Versão recomendada:
 
-```text
 Python 3.12.10
 ```
 
