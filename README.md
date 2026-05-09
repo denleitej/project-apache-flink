@@ -180,11 +180,11 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 ## 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/flink-testing.git
+git clone https://github.com/denleitej/project-apache-flink
 ```
 
 ```bash
-cd flink-testing
+cd project-apache-flink
 ```
 
 ---
