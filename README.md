@@ -1,6 +1,6 @@
-# PIX Analytics with Apache Flink & PyFlink
+# Dados Analíticos do Flink usando Apache Flink e PyFlink
 
-Pipeline analítica utilizando Apache Flink e PyFlink para processamento de dados públicos do PIX disponibilizados pelo Banco Central do Brasil.
+Pipeline analítica utilizando Apache Flink e PyFlink para processamento de dados públicos do PIX disponibilizados pelo Banco Central do Brasil. 
 
 ---
 
@@ -232,8 +232,6 @@ pip install -r requirements.txt
 
 ## Dependências Principais
 
-Exemplo do arquivo `requirements.txt`:
-
 ```txt
 apache-flink
 pandas
@@ -341,13 +339,13 @@ python jobs/pix_analysis.py
 
 # Resultados Gerados
 
-Após a execução do job batch:
+Durante a execução dos Jobs, os resultados serão exibidos de forma geral no terminal, ao mesmo tempo, também serão gerados outputs gráficos em:
 
 ```text
 outputs/charts/
 ```
 
-Serão gerados automaticamente:
+Os arquivos gerados serão:
 
 | Arquivo | Descrição |
 |---|---|
@@ -359,7 +357,7 @@ Serão gerados automaticamente:
 
 # Execução do Streaming Simulado
 
-O projeto inclui um exemplo simplificado de processamento streaming utilizando a DataStream API.
+O projeto inclui um exemplo simplificado de processamento streaming utilizando a DataStream API para demonstração.
 
 ## Executar:
 
@@ -591,20 +589,14 @@ cd flink-testing
 
 ---
 
-# Melhorias Futuras
+# Melhorias Futuras (Em consideração)
 
 Possíveis evoluções do projeto:
 
-- integração com Apache Kafka;
-- dashboards interativos;
-- Streamlit;
-- Plotly;
 - processamento streaming real;
 - deploy em cluster Flink;
 - persistência em banco analítico;
-- Dockerização;
-- automação ETL;
-- monitoramento em tempo real.
+- monitoramento em tempo real e/ou faixas de tempo.
 
 ---
 
@@ -612,12 +604,9 @@ Possíveis evoluções do projeto:
 
 Este projeto cobre:
 
-- Data Engineering;
-- ETL;
-- Batch Processing;
-- Streaming Concepts;
-- SQL Analytics;
-- PyFlink Table API;
-- Data Visualization;
-- Pipelines Analíticas.
-
+- **Processamento Batch** — execução de jobs PyFlink em modo batch sobre arquivos históricos com `in_batch_mode()`
+- **Conceitos de Streaming** — uso do modo streaming para observar atualização incremental de contagens em tempo real
+- **Analíticas de SQL** — queries com `GROUP BY`, `ORDER BY`, `LIMIT`, `SUM`, `AVG` e `ROUND` via Table API
+- **PyFlink Table API** — definição de source/sink com `TableDescriptor`, schema tipado e `FormatDescriptor`
+- **Visualização de Dados** — geração de gráficos a partir dos resultados dos jobs
+- **Pipelines Analíticas** — separação clara entre download, normalização e análise em scripts independentes
