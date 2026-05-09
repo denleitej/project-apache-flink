@@ -308,7 +308,7 @@ Responsável por:
 ### Executar:
 
 ```bash
-python scripts/normalizar_pix.py
+python scripts/normalize_pix.py
 ```
 
 Arquivo gerado:
