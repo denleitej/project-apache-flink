@@ -1,4 +1,4 @@
-pyflink
+apache-flink
 pandas
 requests
 matplotlib
